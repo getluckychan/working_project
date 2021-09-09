@@ -1,1 +1,1 @@
-web: bash extension .sh
+web: bash extension.sh
