@@ -1,21 +1,9 @@
-RMS
-<p>-batch-geocoder
-</p><p>-cli-dashboard
-</p><p>-DependencyCheck
-</p><p>-flyway
-</p><p>-image-builder
-</p><p>-Jenkins-GIt-test
-</p><p>-logback-gelf-appender
-</p><p>-maven-enforcer
-</p><p>-parquet-mr
-</p><p>-python-mapnik
-</p><p>-react-google-maps
-</p><p>-realitycheck
-</p><p>-spark
-</p><p>-spark-jobserver
-</p><p>-stringtemplate4
-</p><p>-telegraf
-</p><p>-terraform
-</p><p>-unmap-datastores
-</p><p>-vscode-jira
+Ivan Kriuchikhin
+<p>-django
+</p><p>-flask_project1
+</p><p>-studying
+</p><p>-test
+</p><p>-working
+</p><p>-working1
+</p><p>-working_project
 </p><p>-it was a last one

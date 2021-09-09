@@ -99,7 +99,7 @@ def result():  # put application's code here
             }
             """
     try:
-        url = 'http://127.0.0.1:8000/'
+        url = 'http://0.0.0.0:5001'
         r = requests.post(url, json={'query': query2})
         json_data = json.loads(r.text)
         name = json_data['data']['getRepo']
