@@ -4,6 +4,8 @@ from graphql.execution.executors.asyncio import AsyncioExecutor
 from starlette.graphql import GraphQLApp
 from schemas import repoType
 import json
+import socket
+import sys
 
 class Query(ObjectType):
   repo_list = None
@@ -14,8 +16,17 @@ class Query(ObjectType):
     return repo_list
 
 app = FastAPI()
+hostname = socket.gethostname()
+version = f"{sys.version_info.major}.{sys.version_info.minor}"
 app.add_route("/", GraphQLApp(
   schema=Schema(query=Query),
   executor_class=AsyncioExecutor)
 )
+@app.get("/")
+async def read_root():
+    return {
+        "name": "my-app",
+        "host": hostname,
+        "version": f"Hello world! From FastAPI running on Uvicorn. Using Python {version}"
+    }
 #uvicorn main:app --reload
