@@ -15,14 +15,14 @@ class Query(ObjectType):
       repo_list = json.load(repo)
     return repo_list
 
-app = FastAPI()
+app1 = FastAPI()
 hostname = socket.gethostname()
 version = f"{sys.version_info.major}.{sys.version_info.minor}"
-app.add_route("/", GraphQLApp(
+app1.add_route("/", GraphQLApp(
   schema=Schema(query=Query),
   executor_class=AsyncioExecutor)
 )
-@app.get("/")
+@app1.get("/")
 async def read_root():
     return {
         "name": "my-app",

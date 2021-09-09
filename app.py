@@ -16,16 +16,9 @@ def index():
 def main():
     if request.method == 'POST':
         username = request.form['username']
-        query = """{
-          name
-        }"""
         request2 = requests.get(f'https://api.github.com/users/{str(username)}')
         if request2.status_code == 200:
             start_name = request2.json()
-        #deadUser = ent.get()
-        query1 = """{
-          name
-        }"""
         request1 = requests.get(f'https://api.github.com/users/{str(username)}/repos')
         if request1.status_code == 200:
             start_repo = request1.json()
@@ -137,4 +130,4 @@ def pageNotFount(error):
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.1')
